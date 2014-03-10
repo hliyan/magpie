@@ -15,6 +15,7 @@ Magpie allows you to track your github projects using a Google Spreadsheet -- al
 - Progress **graphs** for milestone, team members and labels (based on checklist items completed)
 - Magpie comes with a development **methodology** and a philosophy to help you get the most out  of it (though you're free to use your own)
 - A simple, open source **API**, if you want to extend Magpie's capabilities
+- Here is a **[demo](#)**
 
 ####Getting started!
 1. Create a new Google Spreadsheet
@@ -53,19 +54,21 @@ function reset() {
   magpie.reset();
 }
 ```
-9. Remember to replace the sample token above with your actual Github token. Magpie will not store this anywhere.
-10. Reload the spreadhseet
-11. You should see 'Magpie' on the menubar within a few seconds.
-12. Click Magpie > Update
-13. A new sheet called 'config' will appear and you'll be prompted to add data
-14. Fill in the Github repo owner (org), repo, milestone and your timezone data
-15. Click Magpie > Update again and wait for all the new sheets to be added
-16. Explore!
+**After adding the above code**
 
-####Components
-If you prefer to start using Magpie straightaway, skip to the installation section below. If you want to learn some interesting bits about the Magpie code, read on.
+1. Remember to replace the sample token above with your actual Github token. Magpie will not store this anywhere.
+1. Reload the spreadhseet
+1. You should see 'Magpie' on the menubar within a few seconds.
+1. Click Magpie > Update
+1. A new sheet called 'config' will appear and you'll be prompted to add data
+1. Fill in the Github repo owner (org), repo, milestone and your timezone data
+1. Click Magpie > Update again and wait for all the new sheets to be added
+1. On some browsers, the sheet may freeze. If that happens, refresh the page.
 
-Magpie is built on three layers.
+####For the developer
+If you want to learn some interesting bits about the Magpie code, read on.
+
+Magpie is built on three layers:
 - A jQuery-like Google App Script library that allows easy access to Google spreadsheets and their cells
 - A convenient Javascript wrapper over the Github API that can be used from within Google App Script
 - The actual Magpie application, which fetches Github data every hour and renders a dashboard and other reports for your Github project
@@ -84,4 +87,22 @@ var range4 = $(sheet, 'A5'); // same as range1, but with sheet already known
 $.sheet = sheet; // you can even set the sheet context
 var range5 = $(1, 2); // same as range 2
 var range6 = $(1, 1, 5, 5); // same as range 3
+```
+
+**GAGA**
+
+The second layer, also named tongue in cheek, is called GAGA - **Github API for Google Apps**. The following example will illustrate what it does:
+
+```javascript
+// how to use GAGA
+  var data = $git.token('14658cabab79664b4c8e92267da5561b600f422e')
+    .org('hliyan')
+    .project('enterprise')
+    .milestone(1)
+    .status('open+closed')
+    .fetch('issues', true); // true: returns GitIssue objects, false: raw data
+for (var i = 0; i < data.length; i++) {
+    var issue = data[i];
+    Logger.log(issue); // you can see the issue structure here
+}
 ```
