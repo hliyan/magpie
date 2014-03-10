@@ -22,7 +22,7 @@ Magpie allows you to track your github projects using a Google Spreadsheet -- al
 2. Go to **Tools > Script Editor...**
 3. Under **Create script for**, select **Spreadsheet**
 4. Go to **Resources > Libraries...** in script editor
-5. Enter the following **project key** to search for Magpie: **MkAKgftxvg2TEFXUGomqj19ZrzsJqypJa**
+5. Enter the following **project key** to search for Magpie: **MdUOEJMGCt-W-kWU7C0gsZNZrzsJqypJa**
 6. In the results, select the latest version of Magpie
 7. Under identifier, enter *include* (you can enter any other identifier, but this is what I have used with the sample code below. So if you want to copy and paste the initialization code below, use *include*).
 8. Replace the auto generated code from Google with the following:
