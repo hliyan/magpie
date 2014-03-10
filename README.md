@@ -3,26 +3,26 @@ Magpie
 
 A Github Project Management Extension for Google Apps
 
-####Introduction
+###Introduction
 Magpie allows you to track your github projects using a Google Spreadsheet -- all you have to do is link a spreadsheet to a specific milestone on your Github project and it will be updated hourly.
 
 ![dashboard](https://raw.github.com/hliyan/magpie/master/images/magpie-dash.jpg)
 
-####Features
+###Features
 - A **dashboard** showing milestone progress by assignee and labels
 - Milestone **progress** derived from checklist items in body
 - An **activity stream** that shows newly added/completed tasks (by detecting checklist item changes)
 - Progress **graphs** for milestone, team members and labels (based on checklist items completed)
 - Magpie comes with a development **methodology** and a philosophy to help you get the most out  of it (though you're free to use your own)
 - A simple, open source **API**, if you want to extend Magpie's capabilities
-- Here is a **[demo](https://docs.google.com/spreadsheets/d/1XBd3gJdYapLT2wsHRqqVDsrj1o-yFAfHxHSL3SO9wuc/edit#gid=484996571)** (note that due to current security limitations, you need to create your own if you want to see the charts feature)
+- Here is a **[demo](https://docs.google.com/spreadsheets/d/1XBd3gJdYapLT2wsHRqqVDsrj1o-yFAfHxHSL3SO9wuc/edit#gid=484996571)** (note that due to current security limitations, you need to create your own if you want to see the graphs feature)
 
-####Getting started!
+###Getting started!
 1. Create a new Google Spreadsheet
-2. Go to Tools > Script Editor...
-3. Under 'Create script for', select 'Spreadsheet'
-4. Go to Resources > Libraries... in script editor
-5. Enter the following project key to search for Magpie: MkAKgftxvg2TEFXUGomqj19ZrzsJqypJa
+2. Go to **Tools > Script Editor...**
+3. Under **Create script for**, select **Spreadsheet**
+4. Go to **Resources > Libraries...** in script editor
+5. Enter the following **project key** to search for Magpie: **MkAKgftxvg2TEFXUGomqj19ZrzsJqypJa**
 6. In the results, select the latest version of Magpie
 7. Under identifier, enter *include* (you can enter any other identifier, but this is what I have used with the sample code below. So if you want to copy and paste the initialization code below, use *include*).
 8. Replace the auto generated code from Google with the following:
@@ -56,23 +56,23 @@ function reset() {
 ```
 **After adding the above code**
 
-1. Remember to replace the sample token above with your actual Github token. Magpie will not store this anywhere.
+1. Remember to **replace the sample token** above with **your actual Github token**. Magpie will not store this anywhere.
 1. Reload the spreadhseet
 1. You should see 'Magpie' on the menubar within a few seconds.
-1. Click Magpie > Update
+1. Click **Magpie > Update**
 1. A new sheet called 'config' will appear and you'll be prompted to add data
-1. Fill in the Github repo owner (org), repo, milestone and your timezone data
-1. Click Magpie > Update again and wait for all the new sheets to be added
+1. Fill in the Github **repo owner** (org), **repo**, **milestone** and your **timezone** data
+1. Click **Magpie > Update** again and wait for all the new sheets to be added
 1. On some browsers, the sheet may freeze. If that happens, refresh the page.
 1. Consider hiding gridlines (View > Gridlines) - dashboard looks nicer without them
 
-####For the developer
+###For the developer
 If you want to learn some interesting bits about the Magpie code, read on.
 
 Magpie is built on three layers:
-- A jQuery-like Google App Script library that allows easy access to Google spreadsheets and their cells
-- A convenient Javascript wrapper over the Github API that can be used from within Google App Script
-- The actual Magpie application, which fetches Github data every hour and renders a dashboard and other reports for your Github project
+- A **jQuery-like Google App Script library** that allows easy access to Google spreadsheets and their cells
+- A convenient **Javascript wrapper** on top of the **Github API** that can be used from within Google App Script
+- The actual **Magpie application**, which fetches Github data every hour and renders a dashboard and other reports for your Github project
 
 **GASP!**
 
