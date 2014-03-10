@@ -10,11 +10,50 @@ Magpie allows you to track your github projects using a Google Spreadsheet -- al
 
 ####Features
 - A **dashboard** showing milestone progress by assignee and labels
-- Issue **progress** derived from checklist items in body
+- Milestone **progress** derived from checklist items in body
 - An **activity stream** that shows newly added/completed tasks (by detecting checklist item changes)
 - Progress **graphs** for milestone, team members and labels (based on checklist items completed)
 - Magpie comes with a development **methodology** and a philosophy to help you get the most out  of it (though you're free to use your own)
 - A simple, open source **API**, if you want to extend Magpie's capabilities
+
+####Getting started!
+- Create a new Google Spreadsheet
+- Go to Tools > Script Editor...
+- Under 'Create script for', select 'Spreadsheet'
+- Go to Resources > Libraries... in script editor
+- Enter the following project key to search for Magpie: MkAKgftxvg2TEFXUGomqj19ZrzsJqypJa
+- In the results, select the latest version of Magpie
+- Under identifier, enter *include* (you can enter any other identifier, but this is what I have used with the sample code below. So if you want to copy and paste the initialization code below, use *include*).
+- Replace the auto generated code from Google with the following:
+
+```javascript
+magpie = include.magpie; // use the library identifer instead of 'include' if it's different
+include.$db.set(ScriptDb.getMyDb()); // Magpie will use the spreadsheet's database
+
+// this will create the Magpie menubar items
+function onOpen() {  
+  magpie.onOpen();
+};
+
+// this will run when you select Magpie > Update
+// and once every hour
+// replace the token with your own Github token
+function update() {
+  magpie.update('43e200f4c7ec1a974182912a4cb7e3dc9ba95876');
+}
+
+// this will run when you select Magpie > Chart
+function chart() {
+  magpie.viewChartPanel();
+}
+
+// don't use Magpie > Reset unless you want to clear the 
+// database and start over
+function reset() {
+  magpie.reset();
+}
+```
+
 
 ####Components
 If you prefer to start using Magpie straightaway, skip to the installation section below. If you want to learn some interesting bits about the Magpie code, read on.
