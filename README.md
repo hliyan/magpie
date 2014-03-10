@@ -17,14 +17,14 @@ Magpie allows you to track your github projects using a Google Spreadsheet -- al
 - A simple, open source **API**, if you want to extend Magpie's capabilities
 
 ####Getting started!
-- Create a new Google Spreadsheet
-- Go to Tools > Script Editor...
-- Under 'Create script for', select 'Spreadsheet'
-- Go to Resources > Libraries... in script editor
-- Enter the following project key to search for Magpie: MkAKgftxvg2TEFXUGomqj19ZrzsJqypJa
-- In the results, select the latest version of Magpie
-- Under identifier, enter *include* (you can enter any other identifier, but this is what I have used with the sample code below. So if you want to copy and paste the initialization code below, use *include*).
-- Replace the auto generated code from Google with the following:
+1. Create a new Google Spreadsheet
+2. Go to Tools > Script Editor...
+3. Under 'Create script for', select 'Spreadsheet'
+4. Go to Resources > Libraries... in script editor
+5. Enter the following project key to search for Magpie: MkAKgftxvg2TEFXUGomqj19ZrzsJqypJa
+6. In the results, select the latest version of Magpie
+7. Under identifier, enter *include* (you can enter any other identifier, but this is what I have used with the sample code below. So if you want to copy and paste the initialization code below, use *include*).
+8. Replace the auto generated code from Google with the following:
 
 ```javascript
 magpie = include.magpie; // use the library identifer instead of 'include' if it's different
@@ -53,7 +53,14 @@ function reset() {
   magpie.reset();
 }
 ```
-
+9. Remember to replace the sample token above with your actual Github token. Magpie will not store this anywhere.
+10. Reload the spreadhseet
+11. You should see 'Magpie' on the menubar within a few seconds.
+12. Click Magpie > Update
+13. A new sheet called 'config' will appear and you'll be prompted to add data
+14. Fill in the Github repo owner (org), repo, milestone and your timezone data
+15. Click Magpie > Update again and wait for all the new sheets to be added
+16. Explore!
 
 ####Components
 If you prefer to start using Magpie straightaway, skip to the installation section below. If you want to learn some interesting bits about the Magpie code, read on.
