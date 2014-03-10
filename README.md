@@ -15,7 +15,7 @@ Magpie allows you to track your github projects using a Google Spreadsheet -- al
 - Progress **graphs** for milestone, team members and labels (based on checklist items completed)
 - Magpie comes with a development **methodology** and a philosophy to help you get the most out  of it (though you're free to use your own)
 - A simple, open source **API**, if you want to extend Magpie's capabilities
-- Here is a **[demo](#)**
+- Here is a **[demo](https://docs.google.com/spreadsheets/d/1XBd3gJdYapLT2wsHRqqVDsrj1o-yFAfHxHSL3SO9wuc/edit#gid=484996571)** (note that due to current security limitations, you need to create your own if you want to see the charts feature)
 
 ####Getting started!
 1. Create a new Google Spreadsheet
@@ -64,6 +64,7 @@ function reset() {
 1. Fill in the Github repo owner (org), repo, milestone and your timezone data
 1. Click Magpie > Update again and wait for all the new sheets to be added
 1. On some browsers, the sheet may freeze. If that happens, refresh the page.
+1. Consider hiding gridlines (View > Gridlines) - dashboard looks nicer without them
 
 ####For the developer
 If you want to learn some interesting bits about the Magpie code, read on.
