@@ -8,6 +8,13 @@ Magpie allows you to track your github projects using a Google Spreadsheet -- al
 
 ![dashboard](https://raw.github.com/hliyan/magpie/master/images/magpie-dash.jpg)
 
+####Features
+- A **dashboard** showing milestone progress by assignee and labels
+- Issue **progress** derived from checklist items in body
+- An **activity stream** that shows newly added/completed tasks (by detecting checklist item changes)
+- Progress **graphs** for milestone, team members and labels (based on checklist items completed)
+- Magpie comes with a development **methodology** and a philosophy to help you get the most out  of it (though you're free to use your own)
+
 ####Components
 If you prefer to start using Magpie straightaway, skip to the installation section below. If you want to learn some interesting bits about the Magpie code, read on.
 
