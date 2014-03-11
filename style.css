@@ -1,0 +1,16 @@
+#jumbo1 {
+	background-image: url("img/magpie-large.png");
+	background-repeat: no-repeat;
+}
+
+h2 {
+	font-weight: bold;
+}
+
+.navbar {
+	font-weight: bold;
+}
+
+#body-container {
+	width: 70%;
+}
