@@ -151,7 +151,6 @@ This is the process that I use with Magpie. It is what I recommend, but if you f
 ####Metrics are evil
 
 - **Measuring people based on metrics (beyond checklist items) is heavily discouraged**. Management based on summaries and reports is considered lazy and discouraged. **Summarization is lossy compression and metrics are the worst form of summarization**. This philosophy rejects the idea that "a good manager can manage anything" -- you cannot manage what you don't understand. A team should be small enough for the person in charge to review all tasks in detail. If not, the team needs to be split to smaller units and more people with review and oversight skills need to be developed within the team. For the type of work I manage, I find that I start losing details if the team is larger than 12.
-- Github labels are used in two other ways - to mark bugs ("bug") and to specify the module or subsystem to which an issue belongs. These are automatically picked up by Magpie for the dashboard and graphs.
 
 ####Don't over-plan
 
@@ -160,3 +159,5 @@ This is the process that I use with Magpie. It is what I recommend, but if you f
 ####Other
 
 - **Naming conventions**: for consistency, everything is lowercase. Issues are named in the following manner: "module - feature - failure [when condition]". This makes quick scans of the issue list easier. It also helps teams for whom English is not the native language. The module is duplicated in both labels and titles for the benefit of email notifications.
+- Github labels are used in two other ways - to mark bugs ("bug") and to specify the module or subsystem to which an issue belongs. These are automatically picked up by Magpie for the dashboard and graphs.
+- The dashboard is shared with the entire team -- everyone should know where everyone else is at so that he/she can coordinate work accordingly.
