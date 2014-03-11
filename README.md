@@ -24,6 +24,9 @@ Magpie allows you to track your github projects using a Google Spreadsheet -- al
 - A simple, open source **API**, if you want to extend Magpie's capabilities
 - Here is a **[demo](https://docs.google.com/spreadsheets/d/1XBd3gJdYapLT2wsHRqqVDsrj1o-yFAfHxHSL3SO9wuc/edit#gid=484996571)** (note that due to current security limitations, you need to create your own if you want to see the graphs feature)
 
+
+![graphs](https://raw.github.com/hliyan/magpie/master/images/magpie-chart.jpg)
+
 ###Getting started!
 1. Create a new Google Spreadsheet
 2. Go to **Tools > Script Editor...**
