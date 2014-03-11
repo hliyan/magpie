@@ -22,8 +22,6 @@
     </head>
 
     <body>
-    <a href="https://github.com/hliyan/magpie">
-    <img style="position: absolute; top: 0; right: 0; border: 0; z-index:1000;" src="https://github-camo.global.ssl.fastly.net/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
 
@@ -37,70 +35,179 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Intro</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#hello">Start!</a></li>
-            <li><a href="#components">Develop</a></li>
+            <li class="active"><a href="#features">Features</a></li>
+            <li><a href="#start">Getting Started</a></li>
             <li><a href="#philosophy">Philosophy</a></li>
-            <li><a href="#demo">Demo</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1XBd3gJdYapLT2wsHRqqVDsrj1o-yFAfHxHSL3SO9wuc/edit#gid=484996571" target="new">Demo</a></li>
+            <li><a href="#develop">Develop</a></li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
+
+<a href="https://github.com/hliyan/magpie">
+    <img style="position: absolute; top: 50; left: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+    
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
       <div class="row">
         <div class="col-lg-4">
-          <img src="img/magpie-large.png" height="175">
+          <img src="img/magpie-large.png" height="160">
         </div>
         <div class="col-lg-8">
         <h2>Magpie: A Github Project Management Extension for Google Apps</h2>
-        <p>Magpie allows you to track your github projects using a Google Spreadsheet -- all you have to do is link a spreadsheet to a specific milestone on your Github project and it will be updated hourly.</p>
-        <p align="right"><a class="btn btn-primary btn-lg">Get from Github &raquo;</a></p>
+        <p>Magpie allows you to <b>track Github projects</b> using <b>Google Spreadsheets</b> -- all you have to do is link a spreadsheet to a specific milestone on your Github project and it will be <b>automatically updated</b> every hour.</p>
         </div>
       </div>
       </div>
     </div>
 
     <div class="container" id="body-container">
-      <!-- Example row of columns -->
-      Magpie is built on three layers. If you're only interested in using Magpie (and not development), skip directly to <a href="#magpie">this section</a>.
-      <div class="row" id="gasp">
+      <div class="row" id="features">
         <div class="col-lg-12">
-          <h2>GASP!</h2>
-          <p>The lowest layer is an extension that is to Google App Script what jQuery is to Javascript. Tongue in cheek, it's called GASP - Google App Script Plugin.</p>
-          <script src="https://gist.github.com/hliyan/9449038.js"></script>
-        </div>
+          <h1>Features</h1>
+          <p>Magpie allows you to track your github projects using a Google Spreadsheet -- all you have to do is link a spreadsheet to a specific milestone on your Github project and it will be updated hourly.</p>
 
-        <div class="col-lg-12" id="gaga">
-          <h2>GAGA</h2>
-          <p>The second layer, also named tongue in cheek, is called GAGA - Github API for Google Apps. The following example will illustrate what it does:</p>
-          <script src="https://gist.github.com/hliyan/9449175.js"></script>
-          <p>GAGA makes a few assumptions about how you manage projects, explain in the 'philosophy' section. If you don't like them, you can always fork this and mould it to fit your needs.</p>
-        </div>
-
-        <div class="col-lg-12" id="magpie">
-          <h2>MAGPIE</h2>
-          <p>Magpie is built on top of GASP and GAGA above. Here's what it looks like once done (click image to go to live demo).</p>
-          <a href="https://docs.google.com/spreadsheets/d/1MHkuYGV5kJW2Euspp9NcUKR_UC46pPLXLWc-ZQClf98/edit#gid=456717389" target="new"><img src="working/screen1.jpg" width="100%"></a>
-        </div>
-
-        <div class="col-lg-12">
-          <h2>Installation</h2>
           <ol>
-            <li>Create a new Google Spreadsheet.</li>
-            <li>From the menu, select Tools &gt; Script Editor...</li>
-            <li>Create a new script project for Spreadsheet.</li>
-            <li>In the script editor window menu, select Resources &gt; Libraries...</li>
-            <li>Find Magpie using the following project key: <pre>MkAKgftxvg2TEFXUGomqj19ZrzsJqypJa</pre></li>
-            <li>Select the latest version and provide an identifier (I've used the identifer <em>include</em>) in my examples.</li>
-            <li>Switch on debug if you want to develop on top of Magpie.</li>
-            <li>Save</li>
+          <li>A <strong>dashboard</strong> showing milestone progress by assignee and labels</li>
+          <li>Milestone <strong>progress</strong> derived from checklist items in body</li>
+          <li>An <strong>activity stream</strong> that shows newly added/completed tasks (by detecting checklist item changes)</li>
+          <li>Progress <strong>graphs</strong> for milestone, team members and labels (based on checklist items completed)</li>
+          <li>Magpie comes with a development <strong>methodology</strong> and a philosophy to help you get the most out  of it (though you're free to use your own)</li>
+          <li>A simple, open source <strong>API</strong>, if you want to extend Magpie's capabilities</li>
+          <li>Here is a <strong><a href="https://docs.google.com/spreadsheets/d/1XBd3gJdYapLT2wsHRqqVDsrj1o-yFAfHxHSL3SO9wuc/edit#gid=484996571">demo</a></strong> (note that due to current security limitations, you need to create your own if you want to see the graphs feature)</li>
+          </ol>
+          
+          <h4>Dashboard</h4>
+          <img src="https://raw.github.com/hliyan/magpie/master/images/magpie-dash.jpg" width="100%">
+
+          <h4>Progress charts</h4>
+          <img src="https://raw.github.com/hliyan/magpie/master/images/magpie-chart.jpg">
+        </div>
+      </div>
+
+      <div class="row" id="start">
+        <div class="col-lg-12">
+          <h1>Getting Started!</h1>
+          <ol>
+          <li>Create a new Google Spreadsheet</li>
+          <li>Go to <strong>Tools &gt; Script Editor...</strong>
+          </li>
+          <li>Under <strong>Create script for</strong>, select <strong>Spreadsheet</strong>
+          </li>
+          <li>Go to <strong>Resources &gt; Libraries...</strong> in script editor</li>
+          <li>Enter the following <strong>project key</strong> to search for Magpie: <strong>MdUOEJMGCt-W-kWU7C0gsZNZrzsJqypJa</strong>
+          </li>
+          <li>In the results, <strong>select the latest version</strong> of Magpie</li>
+          <li>
+          <strong>Under identifier</strong>, enter <em>include</em> (you can enter any other identifier, but this is what I have used with the sample code below. So if you want to copy and paste the initialization code below, use <em>include</em>).</li>
+          <li>Replace the auto generated code from Google with the <strong>following code</strong>:
+            <p></p>
+            <p></p>
+            <div style="line-height: 110%; font-size: small;">
+              <script src="https://gist.github.com/hliyan/9479799.js"></script>
+            </div>
+          </li>
+          <li>Remember to <strong>replace the sample token</strong> above with <strong>your actual Github token</strong>. Magpie will not store this anywhere.</li>
+          <li>Reload the spreadhseet</li>
+          <li>You should see 'Magpie' on the menubar within a few seconds.</li>
+          <li>Click <strong>Magpie &gt; Update</strong>
+          </li>
+          <li>A new sheet called 'config' will appear and you'll be prompted to add data</li>
+          <li>Fill in the Github <strong>repo owner</strong> (org), <strong>repo</strong>, <strong>milestone</strong> and your <strong>timezone</strong> data</li>
+          <li>Click <strong>Magpie &gt; Update</strong> again and wait for all the new sheets to be added</li>
+          <li>On some browsers, the sheet may freeze. If that happens, refresh the page.</li>
+          <li>Consider hiding gridlines (View &gt; Gridlines) - dashboard looks nicer without them</li>
           </ol>
         </div>
+      </div>
 
+      <div class="row" id="philosophy">
+        <div class="col-lg-12">
+          <h1>Philosophy</h1>
+          <p>Magpie has been tested in small to medium sized real world projects. Those projects relied on a certain methodology. Here is that methodology and the philosophy behind it:</p>
+
+          <p>I've seen developers forced to enter the same information multiple times -- once when they <strong>provide task breakdowns and effort estimates</strong>, once when they're <strong>updating the issue/ticket tracking system</strong> and once again when they're <strong>filling out their timesheets</strong>. And sometimes, when they have a lot of work, they also have their own <strong>to-do lists</strong>. I searched years for a system -- preferably free and open source -- that could collapse all this into one system. Obviously I didn't find it. So I built my own.</p>
+
+          <p>This is the process that I use with Magpie. It is what I recommend, but if you find better (and simpler) alternatives, do let me know. Remember: simplicity is the most important thing.</p>
+
+          <h4>
+          <a name="milestones" class="anchor" href="#milestones"><span class="octicon octicon-link"></span></a>Milestones</h4>
+
+          <ul>
+          <li>
+          <strong>Milestones are two weeks long</strong>, unless there is a specific reason to make it longer or shorter.</li>
+          <li>Milestones are internally named according to <strong>alphabetical themes</strong> (e.g. Aardvark, Barracuda, Coyote, Dragonfly, or Almond, Butterscotch, Cinnamon, etc.). This gives us 2 x 26 = 52 weeks or exactly a year's worth of milestones.</li>
+          </ul><h4>
+          <a name="priorities" class="anchor" href="#priorities"><span class="octicon octicon-link"></span></a>Priorities</h4>
+
+          <ul>
+          <li>There are <strong>four issue priorities</strong>, assigned to issues as Github labels:
+
+          <ul>
+          <li>1 - "Show stopper" - critical bugs, things that are holding back the entire team etc.</li>
+          <li>2 - "Must have" - required deliverable for this milestone</li>
+          <li>3 - "Good to have" - make best effort to deliver, but can be deferred to next milestone if necessary</li>
+          <li> 4 - "When free" - Attempt only when free or when all 1-3 priority issues for the current release have been completed</li>
+          </ul>
+          </li>
+          <li>
+          <strong>Criticality and priority are one and the same</strong>. I have previously used systems where these attributes were represented separately - e.g. a UI fix the client wants right now is high priority but low criticality and a crash that is being deferred for some reason is low priority but high criticality. This only added to the paperwork and did not really contribute anything. The reasoning in Magpie: measure impact of an issue in terms of impact to the project and the client, rather than the system. If the system is in beta, a crash is lower priority than when it's in full production. A missing form label in production is higher priority than a crash in beta.</li>
+          </ul><h4>
+          <a name="timeboxing" class="anchor" href="#timeboxing"><span class="octicon octicon-link"></span></a>Timeboxing</h4>
+
+          <ul>
+          <li>We <strong>timebox</strong> - deadlines cannot be extended; only deliverables can be reduced. Every milestone must contain a percentage of <strong>"Good to have" and "When free" issues that can act as a buffer</strong> if there is a risk of schedule overrun. When you start running out of time, you start by moving "When free" issues to the next milestone. When those are gone, you start moving "Good to have" issues. If you still suffer a schedule overrun, something is wrong with your planning.</li>
+          <li>
+          <strong>Checklists in Github issues are central to the process</strong>. Once an issue has been attached a priority, a milestone and an assignee, a checklist of tasks must be added to the issue description. This represent both a task breakdown and a rough design which the architect / program manager can review.</li>
+          <li>The general guideline for tasks is that <strong>no task represented by a checklist can be longer than two hours</strong>, although more fine grained breakdowns are perfectly fine. If an issue has four checklist items attached, it's a full day task (assuming an 8 hour work day, which is another thing recommended in the philosophy behind Magpie).</li>
+          <li>By trial and error I discovered that for teams like mine, <strong>2 hours is the optimal minor time unit and 2 weeks is the optimal major time unit</strong>. 2-hour tasks mean that a person only has to enter and update only 4 tasks a day on average -- a very minor load.</li>
+          </ul><h4>
+          <a name="checklist-items" class="anchor" href="#checklist-items"><span class="octicon octicon-link"></span></a>Checklist items</h4>
+
+          <ul>
+          <li>Checklist items are not set in stone. If you run into a debugging issue that takes 2 hours, you may append a checklist item to the issue to reflect that. If you have to change the design, you can add new checklist items to reflect that as well. The only requirement here is that your architect / program manager should have, at any given moment, a rough idea of your workload and what you're currently working on.</li>
+          <li>Checklist items are to be updated at commit time, not pull request time, so that the architect / program manager sees gradual progress even for potentially large pull requests.</li>
+          </ul><h4>
+          <a name="metrics-are-evil" class="anchor" href="#metrics-are-evil"><span class="octicon octicon-link"></span></a>Metrics are evil</h4>
+
+          <ul>
+          <li>
+          <strong>Measuring people based on metrics (beyond checklist items) is heavily discouraged</strong>. Management based on summaries and reports is considered lazy and discouraged. <strong>Summarization is lossy compression and metrics are the worst form of summarization</strong>. This philosophy rejects the idea that "a good manager can manage anything" -- you cannot manage what you don't understand. A team should be small enough for the person in charge to review all tasks in detail. If not, the team needs to be split to smaller units and more people with review and oversight skills need to be developed within the team. For the type of work I manage, I find that I start losing details if the team is larger than 12.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row" id="develop">
+        <div class="col-lg-12">
+        <h1>For developers</h1>
+          <p>If you want to learn some interesting bits about the Magpie code, read on.</p>
+
+          <p>Magpie is built on three layers:</p>
+
+          <ul>
+          <li>A <strong>jQuery-like Google App Script library</strong> that allows easy access to Google spreadsheets and their cells</li>
+          <li>A convenient <strong>Javascript wrapper</strong> on top of the <strong>Github API</strong> that can be used from within Google App Script</li>
+          <li>The actual <strong>Magpie application</strong>, which fetches Github data every hour and renders a dashboard and other reports for your Github project</li>
+          </ul>
+
+          <h4>GASP!</h4>
+
+          <p>The lowest layer is an extension that is to Google App Script what jQuery is to Javascript. Tongue in cheek, it's called GASP - <strong>Google App Script Plugin.</strong></p>
+          <div style="line-height: 110%; font-size: small;">
+            <script src="https://gist.github.com/hliyan/9449038.js"></script>
+          </div>
+
+          <h4>GAGA</h4>
+          <p>The second layer, also named tongue in cheek, is called GAGA - <strong>Github API for Google Apps</strong>. The following example will illustrate what it does:</p>
+          <div style="line-height: 110%; font-size: small;">
+            <script src="https://gist.github.com/hliyan/9449175.js"></script>
+          </div>
+          <p>GAGA makes a few assumptions about how you manage projects, explain in the 'philosophy' section. If you don't like them, you can always fork this and mould it to fit your needs.</p>
+        </div>
+      </div>
       <hr>
 
       <footer>
