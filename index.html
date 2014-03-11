@@ -109,22 +109,26 @@
           <li>
           <strong>Under identifier</strong>, enter <em>include</em> (you can enter any other identifier, but this is what I have used with the sample code below. So if you want to copy and paste the initialization code below, use <em>include</em>).</li>
           <li>Replace the auto generated code from Google with the <strong>following code</strong>:
-            <p></p>
-            <p></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
             <div style="line-height: 110%; font-size: small;">
               <script src="https://gist.github.com/hliyan/9479799.js"></script>
             </div>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
           </li>
-          <li>Remember to <strong>replace the sample token</strong> above with <strong>your actual Github token</strong>. Magpie will not store this anywhere.</li>
-          <li>Reload the spreadhseet</li>
-          <li>You should see 'Magpie' on the menubar within a few seconds.</li>
-          <li>Click <strong>Magpie &gt; Update</strong>
-          </li>
-          <li>A new sheet called 'config' will appear and you'll be prompted to add data</li>
-          <li>Fill in the Github <strong>repo owner</strong> (org), <strong>repo</strong>, <strong>milestone</strong> and your <strong>timezone</strong> data (e.g. org=hliyan, repo=enterprise, milestone=1)</li>
-          <li>Click <strong>Magpie &gt; Update</strong> again and wait for all the new sheets to be added</li>
-          <li>On some browsers, the sheet may freeze. If that happens, refresh the page.</li>
-          <li>Consider hiding gridlines (View &gt; Gridlines) - dashboard looks nicer without them</li>
+        <li>Remember to <strong>replace the sample token</strong> above with <strong>your actual Github token</strong>. Magpie will not store this anywhere.</li>
+        <li>Select <strong>Run &gt; onOpen</strong> from the script editor menu.</li>
+        <li>Click <strong>Accept</strong> to allow Magpie to run on your spreadsheet. This is a one-time step.</li>
+        <li>You should now see 'Magpie' on the menubar within a few seconds.</li>
+        <li>Click <strong>Magpie &gt; Update</strong>
+        </li>
+        <li>A new sheet called <strong>conf</strong> will appear and you'll be prompted to add data.</li>
+        <li>On some browsers, Google Sheets may freeze while Magpie is initializing sheets for the first time. <strong>Close and reopen the sheet</strong> if this happens.</li>
+        <li>Fill in the Github <strong>repo owner</strong> (e.g. <em>hliyan</em>), <strong>repo</strong> (e.g. <em>enterprise</em>), <strong>milestone</strong> (e.g. <em>1</em>) and your <strong>timezone</strong> data (e.g. <em>0</em>, <em>GMT</em>).</li>
+        <li>Enter <strong>milestone start and end dates</strong> in 'yyyy-MM-dd' format (if Google Spreadsheet messes with the format, set the cell format to 'Plain Text')</li>
+        <li>Click <strong>Magpie &gt; Update</strong> again and wait for all the new sheets to be added</li>
+        <li>Consider hiding gridlines (<strong>View &gt; Gridlines</strong>) - dashboard looks nicer without them</li>
           </ol>
         </div>
       </div>
@@ -212,6 +216,18 @@
           </div>
           <p>GAGA makes a few assumptions about how you manage projects, explain in the 'philosophy' section. If you don't like them, you can always fork this and mould it to fit your needs.</p>
         </div>
+      </div>
+      
+      <div class="row" id="future">
+          <div class="col-lg-12">
+              <h1>Limitations, future plans</h1>
+                <ul>
+                <li>For now, need one spreadsheet per milestone. Partly deliberate because large projects may result in huge ScriptDb datasets.</li>
+                <li>In the future, it may be possible to implement the UI as a Google Web App.</li>
+                <li>More graphs and reports.</li>
+                <li>Github notification hooks were not used because they don't notify on the most important event for Magpie -- checklist item changes.</li>
+                </ul>
+          </div>
       </div>
       <hr>
 
