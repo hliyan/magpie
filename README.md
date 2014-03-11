@@ -124,7 +124,7 @@ This is the process that I use with Magpie. It is what I recommend, but if you f
 - Github labels are used in two other ways - to mark bugs ("bug") and to specify the module or subsystem to which an issue belongs. These are automatically picked up by Magpie for the dashboard and graphs.
 - The dashboard is shared with the entire team -- everyone should know where everyone else is at so that he/she can coordinate work accordingly.
 
-###For the developer
+##For the developer
 If you want to learn some interesting bits about the Magpie code, read on.
 
 Magpie is built on three layers:
