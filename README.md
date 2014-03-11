@@ -3,6 +3,12 @@ Magpie
 
 A Github Project Management Extension for Google Apps
 
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting started!](#getting-started)
+- [For developers](#for-the-developer)
+- [Philosophy](#philosophy)
+
 ###Introduction
 Magpie allows you to track your github projects using a Google Spreadsheet -- all you have to do is link a spreadsheet to a specific milestone on your Github project and it will be updated hourly.
 
@@ -107,3 +113,11 @@ for (var i = 0; i < data.length; i++) {
     Logger.log(issue); // you can see the issue structure here
 }
 ```
+
+##Philosophy
+
+Magpie has been tested in small to medium sized real world projects. Those projects relied on a certain methodology. Here is that methodology and the philosophy behind it:
+
+I've seen developers forced to enter the same information multiple times -- once when they **provide task breakdowns and effort estimates**, once when they're **updating the issue/ticket tracking system** and once again when they're **filling out their timesheets**. And sometimes, when they have a lot of work, they also have their own **to-do lists**. I searched years for a system -- preferably free and open source -- that could collapse all this into one system. Obviously I didn't find it. So I built my own.
+
+This is the process that I use with Magpie. It is what I recommend, but if you find better (and simpler) alternatives, do let me know. Remember: simplicity is the most important thing.
