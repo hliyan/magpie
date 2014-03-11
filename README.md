@@ -76,48 +76,6 @@ function reset() {
 1. On some browsers, the sheet may freeze. If that happens, refresh the page.
 1. Consider hiding gridlines (View > Gridlines) - dashboard looks nicer without them
 
-###For the developer
-If you want to learn some interesting bits about the Magpie code, read on.
-
-Magpie is built on three layers:
-- A **jQuery-like Google App Script library** that allows easy access to Google spreadsheets and their cells
-- A convenient **Javascript wrapper** on top of the **Github API** that can be used from within Google App Script
-- The actual **Magpie application**, which fetches Github data every hour and renders a dashboard and other reports for your Github project
-
-**GASP!**
-
-The lowest layer is an extension that is to Google App Script what jQuery is to Javascript. Tongue in cheek, it's called GASP - **Google App Script Plugin.**
-
-```javascript
-// how to use GASP
-var sheet = $('sheet1');
-var range1 = $('sheet1', 'A5');
-var range2 = $('sheet1', 1, 2);
-var range3 = $('sheet1', 1, 1, 5, 5); // a 5 x 5 grid
-var range4 = $(sheet, 'A5'); // same as range1, but with sheet already known
-$.sheet = sheet; // you can even set the sheet context
-var range5 = $(1, 2); // same as range 2
-var range6 = $(1, 1, 5, 5); // same as range 3
-```
-
-**GAGA**
-
-The second layer, also named tongue in cheek, is called GAGA - **Github API for Google Apps**. The following example will illustrate what it does:
-
-```javascript
-// how to use GAGA
-  var data = $git.token('14658cabab79664b4c8e92267da5561b600f422e')
-    .org('hliyan')
-    .project('enterprise')
-    .milestone(1)
-    .status('open+closed')
-    .fetch('issues', true); // true: returns GitIssue objects, false: raw data
-for (var i = 0; i < data.length; i++) {
-    var issue = data[i];
-    Logger.log(issue); // you can see the issue structure here
-}
-```
-
 ##Philosophy
 
 Magpie has been tested in small to medium sized real world projects. Those projects relied on a certain methodology. Here is that methodology and the philosophy behind it:
@@ -165,3 +123,45 @@ This is the process that I use with Magpie. It is what I recommend, but if you f
 - **Naming conventions**: for consistency, everything is lowercase. Issues are named in the following manner: "module - feature - failure [when condition]". This makes quick scans of the issue list easier. It also helps teams for whom English is not the native language. The module is duplicated in both labels and titles for the benefit of email notifications.
 - Github labels are used in two other ways - to mark bugs ("bug") and to specify the module or subsystem to which an issue belongs. These are automatically picked up by Magpie for the dashboard and graphs.
 - The dashboard is shared with the entire team -- everyone should know where everyone else is at so that he/she can coordinate work accordingly.
+
+###For the developer
+If you want to learn some interesting bits about the Magpie code, read on.
+
+Magpie is built on three layers:
+- A **jQuery-like Google App Script library** that allows easy access to Google spreadsheets and their cells
+- A convenient **Javascript wrapper** on top of the **Github API** that can be used from within Google App Script
+- The actual **Magpie application**, which fetches Github data every hour and renders a dashboard and other reports for your Github project
+
+**GASP!**
+
+The lowest layer is an extension that is to Google App Script what jQuery is to Javascript. Tongue in cheek, it's called GASP - **Google App Script Plugin.**
+
+```javascript
+// how to use GASP
+var sheet = $('sheet1');
+var range1 = $('sheet1', 'A5');
+var range2 = $('sheet1', 1, 2);
+var range3 = $('sheet1', 1, 1, 5, 5); // a 5 x 5 grid
+var range4 = $(sheet, 'A5'); // same as range1, but with sheet already known
+$.sheet = sheet; // you can even set the sheet context
+var range5 = $(1, 2); // same as range 2
+var range6 = $(1, 1, 5, 5); // same as range 3
+```
+
+**GAGA**
+
+The second layer, also named tongue in cheek, is called GAGA - **Github API for Google Apps**. The following example will illustrate what it does:
+
+```javascript
+// how to use GAGA
+  var data = $git.token('14658cabab79664b4c8e92267da5561b600f422e')
+    .org('hliyan')
+    .project('enterprise')
+    .milestone(1)
+    .status('open+closed')
+    .fetch('issues', true); // true: returns GitIssue objects, false: raw data
+for (var i = 0; i < data.length; i++) {
+    var issue = data[i];
+    Logger.log(issue); // you can see the issue structure here
+}
+```
