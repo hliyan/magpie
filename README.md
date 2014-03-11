@@ -8,6 +8,7 @@ A Github Project Management Extension for Google Apps
 - [Getting started!](#getting-started)
 - [For developers](#for-the-developer)
 - [Philosophy](#philosophy)
+- **[DEMO](https://docs.google.com/spreadsheets/d/1XBd3gJdYapLT2wsHRqqVDsrj1o-yFAfHxHSL3SO9wuc/edit#gid=484996571)**
 
 ###Introduction
 Magpie allows you to track your github projects using a Google Spreadsheet -- all you have to do is link a spreadsheet to a specific milestone on your Github project and it will be updated hourly.
