@@ -33,9 +33,9 @@ Magpie allows you to track your github projects using a Google Spreadsheet -- al
 3. Under **Create script for**, select **Spreadsheet**
 4. Go to **Resources > Libraries...** in script editor
 5. Enter the following **project key** to search for Magpie: **MdUOEJMGCt-W-kWU7C0gsZNZrzsJqypJa**
-6. In the results, select the latest version of Magpie
-7. Under identifier, enter *include* (you can enter any other identifier, but this is what I have used with the sample code below. So if you want to copy and paste the initialization code below, use *include*).
-8. Replace the auto generated code from Google with the following:
+6. In the results, **select the latest version** of Magpie
+7. **Under identifier, enter *include* ** (you can enter any other identifier, but this is what I have used with the sample code below. So if you want to copy and paste the initialization code below, use *include*).
+8. Replace the auto generated code from Google with the **following code**:
 
 ```javascript
 magpie = include.magpie; // use the library identifer instead of 'include' if it's different
@@ -50,7 +50,7 @@ function onOpen() {
 // and once every hour
 // replace the token with your own Github token
 function update() {
-  magpie.update('43e200f4c7ec1a974182912a4cb7e3dc9ba95876');
+  magpie.update('43e200f4c7ec1a974182912a4cb7e3dc9ba95876'); // NOTE: replace!
 }
 
 // this will run when you select Magpie > Chart
