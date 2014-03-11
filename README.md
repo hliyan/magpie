@@ -77,12 +77,12 @@ function reset() {
 1. Click **Accept** to allow Magpie to run on your spreadsheet. This is a one-time step.
 1. You should now see 'Magpie' on the menubar within a few seconds.
 1. Click **Magpie > Update**
-1. A new sheet called 'config' will appear and you'll be prompted to add data.
-1. On some browsers, the sheet may freeze for the very first time. **Close and reopen the sheet** if this happens.
+1. A new sheet called **conf** will appear and you'll be prompted to add data.
+1. On some browsers, Google Sheets may freeze while Magpie is initializing sheets for the first time. **Close and reopen the sheet** if this happens.
 1. Fill in the Github **repo owner** (e.g. *hliyan*), **repo** (e.g. *enterprise*), **milestone** (e.g. *1*) and your **timezone** data (e.g. *0*, *GMT*).
 1. Enter **milestone start and end dates** in 'yyyy-MM-dd' format (if Google Spreadsheet messes with the format, set the cell format to 'Plain Text')
 1. Click **Magpie > Update** again and wait for all the new sheets to be added
-1. Consider hiding gridlines (View > Gridlines) - dashboard looks nicer without them
+1. Consider hiding gridlines (**View > Gridlines**) - dashboard looks nicer without them
 
 ##Philosophy
 
@@ -173,3 +173,9 @@ for (var i = 0; i < data.length; i++) {
     Logger.log(issue); // you can see the issue structure here
 }
 ```
+
+##Limitations, future plans
+- For now, need one spreadsheet per milestone. Partly deliberate because large projects may result in huge ScriptDb datasets.
+- In the future, it may be possible to implement the UI as a Google Web App.
+- More graphs and reports.
+- Github notification hooks were not used because they don't notify on the most important event for Magpie -- checklist item changes.
