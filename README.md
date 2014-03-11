@@ -73,11 +73,12 @@ function reset() {
 **After adding the above code**
 
 1. Remember to **replace the sample token** above with **your actual Github token**. Magpie will not store this anywhere.
-1. Reload the spreadhseet
-1. You should see 'Magpie' on the menubar within a few seconds.
+1. Select **Run > onOpen** from the script editor menu.
+1. Click **Accept** to allow Magpie to run on your spreadsheet. This is a one-time step.
+1. You should now see 'Magpie' on the menubar within a few seconds.
 1. Click **Magpie > Update**
 1. A new sheet called 'config' will appear and you'll be prompted to add data
-1. Fill in the Github **repo owner** (org), **repo**, **milestone** and your **timezone** data
+1. Fill in the Github **repo owner** (e.g. *hliyan*), **repo** (e.g. *enterprise*), **milestone** (e.g. *1*) and your **timezone** data (e.g. *0*, *GMT*).
 1. Click **Magpie > Update** again and wait for all the new sheets to be added
 1. On some browsers, the sheet may freeze. If that happens, refresh the page.
 1. Consider hiding gridlines (View > Gridlines) - dashboard looks nicer without them
