@@ -177,7 +177,7 @@ for (var i = 0; i < data.length; i++) {
 }
 ```
 
-##Limitations, future plans
+## Limitations, future plans
 - For now, need one spreadsheet per milestone. Partly deliberate because large projects may result in huge ScriptDb datasets.
 - In the future, it may be possible to implement the UI as a Google Web App.
 - More graphs and reports.
